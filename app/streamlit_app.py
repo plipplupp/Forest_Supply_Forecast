@@ -70,7 +70,8 @@ factors = load_volume_factors()
 
 _top = ["Hela landet", "Norra Norrland", "Södra Norrland", "Svealand", "Götaland"]
 regions = _top + sorted(r for r in wide.columns if r not in _top)
-region = st.sidebar.selectbox("Region", regions, index=0)
+region = st.sidebar.selectbox("Region", regions,
+                              index=regions.index("Götaland"))
 avail = [m for m in MODEL_ORDER
          if m in set(forecasts.loc[forecasts["region_name"] == region, "model"])]
 model = st.sidebar.selectbox("Modell", avail, index=0)
@@ -131,7 +132,7 @@ st.markdown(
 )
 st.caption(
     "Prognos för anmäld avverkningsareal (ha) – en ledande indikator för kommande "
-    "råvarutillförsel: anmälan föregår avverkning, som blir virkesvolym. Vi prognostiserar "
+    "råvarutillförsel: anmälan föregår avverkning, som blir virkesvolym. Prognostisering av "
     "arealen, inte kubikmeter."
 )
 
