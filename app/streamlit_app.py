@@ -209,7 +209,7 @@ else:
 if "XGBoost" in model:
     st.caption("XGBoost ger punktprognoser utan prognosintervall – kvantiler "
                "(P10–P90) produceras endast av TimesFM i detta projekt.")
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 # ------------------------------------------------------------- precision + förklaringar
 with st.expander("Modellens precision – och vad felmåtten betyder"):
