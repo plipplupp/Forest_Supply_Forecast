@@ -132,7 +132,7 @@ st.markdown(
 )
 st.caption(
     "Prognos för anmäld avverkningsareal (ha) – en ledande indikator för kommande "
-    "råvarutillförsel: anmälan föregår avverkning, som blir virkesvolym. Prognostisering av "
+    "råvarutillförsel: anmälan föregår avverkning, som blir virkesvolym. Prognosen gäller "
     "arealen, inte kubikmeter."
 )
 
